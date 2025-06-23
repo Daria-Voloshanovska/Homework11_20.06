@@ -1,20 +1,21 @@
 package ait.cohort5860.student.controller;
-
 import ait.cohort5860.student.dto.ScoreDto;
 import ait.cohort5860.student.dto.StudentCredentialsDto;
 import ait.cohort5860.student.dto.StudentDto;
 import ait.cohort5860.student.dto.StudentUpdateDto;
 import ait.cohort5860.student.service.StudentService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Set;
 
+
 @RestController
+@RequiredArgsConstructor
 public class StudentController  {
-    @Autowired
-    private StudentService studentService;
+
+    private  final StudentService studentService;
 
 
     @PostMapping("/student")
