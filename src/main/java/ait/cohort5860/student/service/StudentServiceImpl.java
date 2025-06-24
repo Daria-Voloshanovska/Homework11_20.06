@@ -25,7 +25,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Boolean addStudent(StudentCredentialsDto studentCredentialsDto) {
-        if (studentRepository.findById(studentCredentialsDto.getId()).isPresent()) {
+        if (studentRepository.existsById(studentCredentialsDto.getId())) {
             return false;
         }
 //        Student student = new Student(studentCredentialsDto.getId(), studentCredentialsDto.getName(),
